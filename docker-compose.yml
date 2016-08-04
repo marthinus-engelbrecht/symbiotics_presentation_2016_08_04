@@ -1,0 +1,11 @@
+sinopia: 
+    image: keyvanfatehi/sinopia
+    environment: 
+        - "constraint:type!=haproxy"
+    ports: 
+        - "4873"
+
+haproxy: 
+    image: haproxy
+    environment:
+        - "constraint:type=haproxy"
